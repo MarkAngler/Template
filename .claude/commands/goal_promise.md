@@ -49,4 +49,5 @@ false "done."
 
 End your final message with a checklist: each gate marked [PASS] with its
 evidence, or [BLOCKED] with the reason.
+
 ━━━ END DEFINITION OF DONE ━━━
