@@ -30,11 +30,18 @@ defensive branch), name that exact line and the reason and exclude it
 explicitly rather than silently dropping coverage.
 
 GATE 4 — LIVE TEST
-Run the feature for real in an actual runtime, not just the test harness:
-start the server and call the endpoint, execute the command-line interface
-(CLI) with real arguments, render the component, or run the script on real
-input — whatever "actually using it" means for this goal. Paste the exact
-command(s) and the actual output that prove it works.
+First, determine what this goal actually produces and what entry point a real
+user would touch — e.g. a web page in a browser, an HTTP endpoint, a CLI
+command, a rendered UI component, an imported library function, or a batch
+script. Exercise ONLY the entry points this goal actually exposes. Do not
+invent, assume, or test an interface the project does not have. If the goal
+is a website with no command-line tool, do NOT run or fabricate a CLI — load
+the page and drive the real user flow instead. If you are unsure which entry
+point applies, that is a signal to inspect the project, not to guess.
+Then run that entry point for real in an actual runtime — not the test
+harness — with real inputs. Paste the exact command(s) or steps and the
+actual output (server response, rendered page, command stdout, etc.) that
+prove the feature works.
 
 GATE 5 — VERIFY, DON'T CLAIM
 Before asserting any gate is met, run the command that proves it and read
