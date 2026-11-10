@@ -1,0 +1,2 @@
+- ALWAYS use a subagent with the latest sonnet model on medium for implementation
+- ALWAYS use subsgents to perform atleast one edge, and one blind review using the latest opus model on extra high
